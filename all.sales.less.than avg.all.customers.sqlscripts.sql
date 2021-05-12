@@ -6,5 +6,4 @@ select *
 		from Customers)
 		order by sales desc
 	
-	select avg (sales)
-		from Customers
+	
