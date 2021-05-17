@@ -65,6 +65,21 @@ insert Users (Username, Password, Firstname, Lastname, Phone, Email, IsReviewer,
 			('Staplesauce', 'stapleshasstaples', 'Alex', 'Douglas', '444-666-9999', 'Adoug@staples.com', 1, 0),
 			('GameStopit', 'stonksbaby', 'George', 'Sherman', '333-999-1111', 'Gsherman@gamestop.com', 0, 0);
 
+insert Vendors (Code, Name, Address, City, State, Zip, Phone, email)
+	values ('AMZ', 'Amazon', '14 Jungle Blvd', 'San Diego', 'CA', 22434, '777-555-0000', 'Jbez@amazon.com'),
+			('STP', 'Staples', '55 Click Clack Ln', 'Modesto', 'CA', 95313, '444-666-9999', 'Adoug@staples.com'),
+			('GME', 'GameStop', '1010 Arcade Way', 'Tracy', 'CA', 95304, '333-999-1111', 'Gsherman@gamestop.com');
+
+insert Products (VendorId, PartNbr, Name, Price, Unit, PhotoPath)
+	values ((Select Id from Vendors where Code = 'AMZ'), 1111, 'Echo Dot', 49.99, 'Edot', null),
+			((select Id from Vendors where Code = 'STP'), 2222, 'Staplepack', 2.99, 'Staple', null),
+			((select Id from vendors where Code = 'GME'), 3333, 'FNAF Hoodie', 19.99, 'Hoodie', null)
+/*			
+insert Requests (UserId, Description, Justification, RejectReasoning, DeliveryMode, Status, Total),
+	
+	
+insert RequestLines (RequestId, ProductId, Quantity)
+*/
 
 
 
