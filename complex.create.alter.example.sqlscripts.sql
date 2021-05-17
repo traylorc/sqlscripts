@@ -25,4 +25,6 @@ end;
 go
 exec AddUser 'xx1', 'xx', 'xx', 'xx';
 
-select* from Users
+select * from Users
+
+delete Users where Id = 4

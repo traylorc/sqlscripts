@@ -25,7 +25,7 @@ alter table Customers
 	alter column name varchar (50)not null;
 */
 select *
-	from customers
+	from 
 
 
 		
