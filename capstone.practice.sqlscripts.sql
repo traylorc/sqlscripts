@@ -71,9 +71,9 @@ insert Vendors (Code, Name, Address, City, State, Zip, Phone, email)
 			('GME', 'GameStop', '1010 Arcade Way', 'Tracy', 'CA', 95304, '333-999-1111', 'Gsherman@gamestop.com');
 
 insert Products (VendorId, PartNbr, Name, Price, Unit, PhotoPath)
-	values ((Select Id from Vendors where Code = 'AMZ'), 1111, 'Echo Dot', 49.99, 'Edot', null),
-			((select Id from Vendors where Code = 'STP'), 2222, 'Staplepack', 2.99, 'Staple', null),
-			((select Id from vendors where Code = 'GME'), 3333, 'FNAF Hoodie', 19.99, 'Hoodie', null)
+	values ((Select Id from Vendors where Code = 'AMZ'), 1111, 'Echo Dot', 49.99, 'each', null),
+			((select Id from Vendors where Code = 'STP'), 2222, 'Staples', 2.99, 'each', null),
+			((select Id from vendors where Code = 'GME'), 3333, 'FNAF Hoodie', 19.99, 'each', null)
 /*			
 insert Requests (UserId, Description, Justification, RejectReasoning, DeliveryMode, Status, Total),
 	
